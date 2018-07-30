@@ -231,7 +231,7 @@ class MessageForm extends ContentEntityForm {
     // Set up message link and status message contexts.
     $message_link = $message->link($this->t('View'));
     $context = [
-      '@type' => $message->getTemplate(),
+      '@type' => $message->getTemplate()->id(),
       '%title' => 'Message:' . $message->id(),
       'link' => $message_link,
     ];
